@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning Course</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>English to Hindi Learning Course</h1>
+    <div class="container">
+        <div id="lesson-container">
+            <h2 id="lesson-title"></h2>
+            <p id="lesson-content"></p>
+            <audio id="lesson-audio" controls></audio>
+            <button onclick="nextLesson()">Next Lesson</button>
+        </div>
+        
+        <div id="quiz-container" class="hidden">
+            <h2>Quiz Time!</h2>
+            <p id="question"></p>
+            <input type="text" id="answer" placeholder="Your Answer">
+            <button onclick="checkAnswer()">Submit</button>
+            <p id="feedback"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
