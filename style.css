@@ -1,29 +1,77 @@
 body {
-    font-family: Arial, sans-serif;
+    font-size: 22px;
     text-align: center;
-    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    background: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     margin: 0;
-    padding: 20px;
+    overflow: hidden;
 }
-.container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
+#wordDisplay {
+    font-size: 32px; /* Increase this value for a bigger font */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.game-container {
+    position: relative;
+    width: 80%;
+    height: 300px;
+    border: 2px solid #333;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
-.hidden {
-    display: none;
+.letter {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    background: #add8e6;
+}
+.selected {
+    opacity: 0.6;
+}
+.answer-box {
+    font-size: 16px;
+    margin-top: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    display: block;
+    min-width: 200px;
+    min-height: 10px;
+    background: white;
+}
+.correct {
+    color: green;
+    font-size: 28px;
+    margin-top: 20px;
+}
+.wrong {
+    color: red;
+    font-size: 28px;
+    margin-top: 20px;
+}
+.controls {
+    margin-top: 20px;
 }
 button {
+    font-size: 18px;
     padding: 10px;
-    margin-top: 10px;
-    background: #28a745;
-    color: white;
-    border: none;
+    margin: 5px;
     cursor: pointer;
 }
-button:hover {
-    background: #218838;
+.emoji-container {
+    font-size: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
