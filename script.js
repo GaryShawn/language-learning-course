@@ -86,5 +86,4 @@ let words = {
         function restartWord() {
             startGame();
         }
-
-        startGame();
+startGame();
