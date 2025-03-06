@@ -3,28 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Language Learning Course</title>
+    <title>Word Wave Translator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>English to Hindi Learning Course</h1>
-    <div class="container">
-        <div id="lesson-container">
-            <h2 id="lesson-title"></h2>
-            <p id="lesson-content"></p>
-            <audio id="lesson-audio" controls></audio>
-            <button onclick="nextLesson()">Next Lesson</button>
-        </div>
-        
-        <div id="quiz-container" class="hidden">
-            <h2>Quiz Time!</h2>
-            <p id="question"></p>
-            <input type="text" id="answer" placeholder="Your Answer">
-            <button onclick="checkAnswer()">Submit</button>
-            <p id="feedback"></p>
-        </div>
+    <h2>Translate the word to Kuzhale!</h2>
+    <div id="wordDisplay"></div>
+    <div class="game-container" id="gameContainer"></div>
+    <div class="answer-box" id="answerBox"></div>
+    <div class="controls">
+        <button onclick="undoLast()">Undo</button>
+        <button onclick="restartWord()">Re-Shuffle</button>
     </div>
-
+    <div id="result"></div>
+    <div class="emoji-container" id="emoji">😐</div>
+    
     <script src="script.js"></script>
 </body>
 </html>
