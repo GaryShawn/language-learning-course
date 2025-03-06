@@ -6,29 +6,26 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start; /* Allow content to flow naturally */
+    height: auto;
+    min-height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding: 20px; /* Add some padding to avoid content touching edges */
 }
-#wordDisplay {
-    font-size: 32px; /* Increase this value for a bigger font */
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+
 .game-container {
     position: relative;
-    width: 90%; /* Adjusted for better mobile fit */
-    max-width: 500px; /* Prevents it from stretching too wide on larger screens */
-    height: auto; /* Let the height adjust dynamically */
-    min-height: 250px; /* Ensures the box doesn't shrink too much */
+    width: 90%;
+    max-width: 500px;
+    min-height: 250px;
     border: 2px solid #333;
     background: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 10px; /* Add some padding to prevent overlap */
+    padding: 10px;
 }
 
 .letter {
@@ -40,22 +37,19 @@ body {
     cursor: pointer;
     transition: transform 0.2s;
     background: #add8e6;
+    flex: 1 1 22%;
     text-align: center;
 }
 
-@media (max-width: 768px) { /* Mobile-friendly adjustments */
-    .game-container {
-        width: 100%;
-        min-height: 300px; /* Prevents it from collapsing */
-        padding: 15px;
-    }
+.emoji-container {
+    font-size: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-@media (max-width: 480px) { /* Smaller mobile screens */
-}
-.selected {
-    opacity: 0.6;
-}
 .answer-box {
     font-size: 16px;
     margin-top: 10px;
@@ -66,27 +60,60 @@ body {
     min-height: 10px;
     background: white;
 }
-.correct {
-    color: green;
+
+.correct, .wrong {
     font-size: 28px;
     margin-top: 20px;
 }
-.wrong {
-    color: red;
-    font-size: 28px;
-    margin-top: 20px;
-}
+
 .controls {
     margin-top: 20px;
 }
+
 button {
     font-size: 18px;
     padding: 10px;
     margin: 5px;
     cursor: pointer;
 }
-.emoji-container {
-    font-size: 70px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+@media (max-width: 768px) { /* Mobile adjustments */
+    .game-container {
+        width: 95%;
+        min-height: 300px;
+        padding: 15px;
+    }
+
+    .letter {
+        font-size: 24px;
+        padding: 10px;
+        flex: 1 1 30%;
+    }
+
+    .emoji-container {
+        font-size: 50px; /* Slightly smaller emoji for mobile */
+        margin-bottom: 10px;
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .letter {
+        font-size: 20px;
+        flex: 1 1 40%;
+    }
+
+    .emoji-container {
+        font-size: 40px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px;
+    }
 }
