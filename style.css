@@ -18,25 +18,40 @@ body {
 }
 .game-container {
     position: relative;
-    width: 80%;
-    height: 300px;
+    width: 90%; /* Adjusted for better mobile fit */
+    max-width: 500px; /* Prevents it from stretching too wide on larger screens */
+    height: auto; /* Let the height adjust dynamically */
+    min-height: 250px; /* Ensures the box doesn't shrink too much */
     border: 2px solid #333;
     background: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    padding: 10px; /* Add some padding to prevent overlap */
 }
+
 .letter {
     font-size: 28px;
     font-weight: bold;
-    padding: 10px;
-    margin: 5px;
+    padding: 12px;
+    margin: 6px;
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.2s;
     background: #add8e6;
+    text-align: center;
+}
+
+@media (max-width: 768px) { /* Mobile-friendly adjustments */
+    .game-container {
+        width: 100%;
+        min-height: 300px; /* Prevents it from collapsing */
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) { /* Smaller mobile screens */
 }
 .selected {
     opacity: 0.6;
