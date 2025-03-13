@@ -5,7 +5,7 @@ let words = {
     "Naughty": "Mezhitrüh",
     "Faith": "Mehli",
     "Chicken": "Ehfü",
-    "Thanks": "Krala"
+    "Thanks": "Krala",
     "Armpit": "Kazhitrhobu"
 };
 
