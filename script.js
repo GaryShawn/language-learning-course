@@ -1,10 +1,12 @@
 let words = {
     "Mr": "Ino",
-    "One": "kele",
+    "Big-Poop": "Budei",
     "Food": "Khune",
+    "Naughty": "Mezhitrüh",
     "Faith": "Mehli",
     "Chicken": "Ehfü",
     "Thanks": "Krala"
+    "Armpit": "Kazhitrhobu"
 };
 
 let wordKeys = Object.keys(words);
